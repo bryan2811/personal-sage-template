@@ -1,10 +1,12 @@
 import domReady from '@roots/sage/client/dom-ready';
+import { initializeLenis } from './lenis';
 
 /**
  * Application entrypoint
  */
 domReady(async () => {
-  // ...
+  // Initialize Lenis
+  initializeLenis();
 });
 
 /**
