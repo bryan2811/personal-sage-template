@@ -3,6 +3,7 @@
 namespace App\View\Components;
 
 use Roots\Acorn\View\Component;
+use function Roots\bundle;
 
 class Alert extends Component
 {
@@ -43,6 +44,7 @@ class Alert extends Component
     {
         $this->type = $this->types[$type] ?? $this->types['default'];
         $this->message = $message;
+        $this->enqueue();
     }
 
     /**
@@ -53,5 +55,15 @@ class Alert extends Component
     public function render()
     {
         return $this->view('components.alert');
+    }
+
+    /**
+     * Assets to be enqueued when rendering the component.
+     *
+     * @return void
+     */
+    public function enqueue()
+    {
+        bundle('View/Components/Alert')->enqueue();
     }
 }

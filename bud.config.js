@@ -35,6 +35,7 @@ export default async (app) => {
     .entry('editor', ['@scripts/editor', '@styles/editor'])
     .entry('header', ['@styles/components/header'])
     .entry(await mappedAssets('Blocks'))
+    .entry(await mappedAssets('View/Components'))
     .assets(['fonts', 'images']);
 
   /**
