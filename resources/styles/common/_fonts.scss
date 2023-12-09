@@ -1,3 +1,31 @@
+// Thin
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 100;
+  src: url('~@fonts/geist-thin.woff2') format('woff2');
+}
+
+// Ultra Light
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 200;
+  src: url('~@fonts/geist-ultra-light.woff2') format('woff2');
+}
+
+// Light
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 300;
+  src: url('~@fonts/geist-light.woff2') format('woff2');
+}
+
+// Regular
 @font-face {
   font-display: swap;
   font-family: Geist;
@@ -6,6 +34,7 @@
   src: url('~@fonts/geist-regular.woff2') format('woff2');
 }
 
+// Medium
 @font-face {
   font-display: swap;
   font-family: Geist;
@@ -14,10 +43,38 @@
   src: url('~@fonts/geist-medium.woff2') format('woff2');
 }
 
+// Semi Bold
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 600;
+  src: url('~@fonts/geist-semi-bold.woff2') format('woff2');
+}
+
+// Bold
 @font-face {
   font-display: swap;
   font-family: Geist;
   font-style: normal;
   font-weight: 700;
   src: url('~@fonts/geist-bold.woff2') format('woff2');
+}
+
+// Black
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 800;
+  src: url('~@fonts/geist-black.woff2') format('woff2');
+}
+
+// Ultra Black
+@font-face {
+  font-display: swap;
+  font-family: Geist;
+  font-style: normal;
+  font-weight: 900;
+  src: url('~@fonts/geist-ultra-black.woff2') format('woff2');
 }

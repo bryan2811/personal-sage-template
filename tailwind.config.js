@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} config */
 const config = {
-  content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js}'],
+  content: ['./index.php', './app/**/*.php', './resources/**/*.{php,vue,js,svg}'],
   theme: {
     screens: {
       sm: '640px',
@@ -18,6 +18,7 @@ const config = {
     extend: {
       colors: {
         'dark': '#0E0E0E',
+        'active-green': '#33FF00',
       },
       fontFamily: {
         sans: ['Geist', 'sans-serif']

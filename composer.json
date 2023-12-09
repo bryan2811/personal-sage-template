@@ -42,9 +42,11 @@
     "php": "^8.0",
     "log1x/acf-composer": "^2.1",
     "log1x/sage-directives": "^2.0",
+    "log1x/sage-svg": "^1.1",
     "roots/acorn": "^3.2"
   },
   "require-dev": {
+    "spatie/laravel-ignition": "^1.6",
     "squizlabs/php_codesniffer": "3.7.2"
   },
   "suggest": {

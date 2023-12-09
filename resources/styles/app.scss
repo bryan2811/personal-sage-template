@@ -1,7 +1,16 @@
 //Globals
 @import 'common/fonts';
+@import 'common/spacing';
+@import 'common/animations';
 
 /* stylelint-disable scss/at-rule-no-unknown */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  overflow-x: hidden;
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

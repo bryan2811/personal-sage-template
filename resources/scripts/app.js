@@ -1,5 +1,7 @@
 import domReady from '@roots/sage/client/dom-ready';
 import { initializeLenis } from './lenis';
+import { initializeHeader } from './header';
+import { setupAppearAnimations } from './animations';
 
 /**
  * Application entrypoint
@@ -7,6 +9,8 @@ import { initializeLenis } from './lenis';
 domReady(async () => {
   // Initialize Lenis
   initializeLenis();
+  initializeHeader();
+  setupAppearAnimations();
 });
 
 /**

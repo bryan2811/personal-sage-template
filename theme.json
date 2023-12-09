@@ -1251,6 +1251,11 @@
           "color": "#0e0e0e",
           "name": "Dark",
           "slug": "dark"
+        },
+        {
+          "color": "#33ff00",
+          "name": "Active-green",
+          "slug": "active-green"
         }
       ]
     },

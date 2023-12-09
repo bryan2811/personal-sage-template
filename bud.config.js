@@ -1,3 +1,20 @@
+import {basename, join} from 'node:path';
+import glob from '@roots/bud-support/globby';
+
+/**
+ * Maps the assets in the specified directory.
+ *
+ * @param {string} dir - The directory to search for assets.
+ * @returns {Promise<Object>} - A promise that resolves to an object mapping the assets.
+ */
+const mappedAssets = async (dir) => {
+  const assets = await glob(`app/${dir}/*`);
+  const rel = (s) => join(dir, basename(s, '.php'));
+  const entry = (a, c) => ({...a, [c]: [c]});
+
+  return assets.map(rel).reduce(entry, {});
+};
+
 /**
  * Compiler configuration
  *
@@ -16,6 +33,8 @@ export default async (app) => {
   app
     .entry('app', ['@scripts/app', '@styles/app'])
     .entry('editor', ['@scripts/editor', '@styles/editor'])
+    .entry('header', ['@styles/components/header'])
+    .entry(await mappedAssets('Blocks'))
     .assets(['fonts', 'images']);
 
   /**

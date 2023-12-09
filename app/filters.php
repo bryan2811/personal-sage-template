@@ -14,3 +14,9 @@ namespace App;
 add_filter('excerpt_more', function () {
     return sprintf(' &hellip; <a href="%s">%s</a>', get_permalink(), __('Continued', 'sage'));
 });
+
+// add_filter('allowed_block_types', function ($allowed_blocks) {
+//     return [
+//         'acf/home-hero'
+//     ];
+// });

@@ -1,0 +1,25 @@
+.wp-acf-block {
+  &.spacing-top-small {
+    @apply mt-5 md:mt-7 lg:mt-10;
+  }
+
+  &.spacing-top-normal {
+    @apply mt-10 md:mt-14 lg:mt-20;
+  }
+
+  &.spacing-top-large {
+    @apply mt-20 md:mt-28 lg:mt-32;
+  }
+
+  &.spacing-bottom-small {
+    @apply mb-5 md:mb-7 lg:mb-10;
+  }
+
+  &.spacing-bottom-normal {
+    @apply mb-10 md:mb-14 lg:mb-20;
+  }
+
+  &.spacing-bottom-large {
+    @apply mb-20 md:mb-28 lg:mb-32;
+  }
+}
