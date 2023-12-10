@@ -118,6 +118,7 @@ class HomeHero extends Block
      */
     public $example = [
         'title' => 'Home Hero',
+        'subtitle' => 'Subtitle'
     ];
 
     /**
@@ -144,6 +145,7 @@ class HomeHero extends Block
         $homeHero
             ->addTab('Content')
                 ->addText('title')
+                ->addText('subtitle')
 
             ->addTab('Layout')
                 ->addFields(CustomFields::getCustomField('section_spacing'));
@@ -160,6 +162,7 @@ class HomeHero extends Block
     {
         return [
             'title' => get_field('title') ?: $this->example['title'],
+            'subtitle' => get_field('subtitle') ?: $this->example['subtitle'],
             'spacing_class' => 'wp-acf-block spacing-top-' . get_field('spacing_top') . ' spacing-bottom-' . get_field('spacing_bottom'),
         ];
     }
@@ -171,6 +174,12 @@ class HomeHero extends Block
      */
     public function enqueue()
     {
-        bundle('Blocks/HomeHero')->enqueue();
+        add_action('enqueue_block_editor_assets', function () {
+            bundle('Blocks/HomeHero')->enqueueJs();
+        }, 100);
+
+        if(!is_admin()) {
+            bundle('Blocks/HomeHero')->enqueueJs();
+        }
     }
 }

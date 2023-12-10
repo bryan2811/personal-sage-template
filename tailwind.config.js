@@ -22,7 +22,41 @@ const config = {
       },
       fontFamily: {
         sans: ['Geist', 'sans-serif']
-      }
+      },
+      animation: {
+        'pulse-before': 'pulse 3s 1s linear infinite',
+        'pulse-after': 'pulse 3s linear infinite',
+        'pulse-shadow': '3s 2s linear infinite',
+        'marquee': 'marquee 30s linear infinite',
+      },
+      keyframes: {
+        'pulse': {
+          '0%': {
+            transform: 'scale(1)',
+            opacity: 0.4
+          },
+          '100%': {
+            transform: 'scale(3)',
+            opacity: 0
+          },
+        },
+        'pulse-shadow': {
+          '0%': {
+            boxShadow: '0 0 0 0 fade-out(#33FF00, 0.6)',
+          },
+          '100%': {
+            boxShadow: '0 0 0 calc((3 - 1) * 0.75rem / 2) #3F00',
+          },
+        },
+        'marquee': {
+          from: {
+            transform: 'translateX(0%)',
+          },
+          to: {
+            transform: 'translateX(calc(-100% - 2.5rem))',
+          },
+        }
+      },
     },
   },
   plugins: [],
