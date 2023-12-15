@@ -30,7 +30,7 @@ function setupAppearAnimations () {
 					const { appearChild: timeout } = childEl.dataset;
 					const child = {
 						el: childEl,
-						timeout: Number( timeout )
+						timeout: Number( timeout ),
 					};
 
 					parent.children.push( child );
